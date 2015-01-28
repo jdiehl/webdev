@@ -2,7 +2,10 @@
 'use strict';
 
 var path = require('path');
-var server = require('./lib/server');
+var createServer = require('./lib/server');
 var config = require(path.join(process.cwd(), 'webdev.json'));
 
-server(config);
+var server = createServer(config, function (err) {
+  if (err) return console.error('Could not start server:', err);
+  console.log('webdev server listening on port', server.address().port);
+});
