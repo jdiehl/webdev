@@ -12,6 +12,8 @@
 
 Create the file `webdev.json` in your project root and configure it using the following structure:
 
+* `log`: enable verbose logging of all requests
+* `port`: specify the port to run the server on (default: 3000)
 * `livereload`: enable the [live reload](https://github.com/mklabs/tiny-lr) server
 ** `watch`: array of file patterns to watch for changes for the live reload server
 * `routes`: the routes of the webdev server
@@ -23,6 +25,8 @@ Create the file `webdev.json` in your project root and configure it using the fo
 
 ```json
 {
+  "log": true,
+  "port": 80,
   "livereload": {
     "watch": ["app/**/*", "public/**/*"]
   },
