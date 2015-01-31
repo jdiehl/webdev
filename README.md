@@ -76,6 +76,7 @@ The concat route combines multiple files into a single file. The files are delim
 Configuration options:
 
 * `files`: list of [glob](https://github.com/isaacs/node-glob) patterns
+* `contentType`: content type to deliver (default: text/javascript)
 
 ### less
 
