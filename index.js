@@ -1,11 +1,26 @@
 #!/usr/bin/env node
 'use strict';
 
-var path = require('path');
+var fs = require('fs');
 var createServer = require('./lib/server');
-var config = require(path.join(process.cwd(), 'webdev.json'));
 
-var server = createServer(config, function (err) {
-  if (err) return console.error('Could not start server:', err);
-  console.log('webdev server listening on port', server.address().port);
+function loadConfig(done) {
+  fs.readFile('webdev.json', function (err, content) {
+    if (err) return done(err);
+    var config;
+    try {
+      config = JSON.parse(content);
+    } catch (e) {
+      return done(e);
+    }
+    done(undefined, config);
+  });
+}
+
+loadConfig(function (err, config) {
+  if (err) return console.error('Could not load configuration file webdev.json:', err);
+  var server = createServer(config, function (err) {
+    if (err) return console.error('Could not start server:', err);
+    console.log('webdev server listening on port', server.address().port);
+  });
 });
