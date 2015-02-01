@@ -16,8 +16,7 @@ Create the file `webdev.json` in your project root and configure it using the fo
 ** `format`: [format](https://github.com/expressjs/morgan#predefined-formats) to use (default: `dev`)
 ** `path`: write log to file instead of console
 * `port`: specify the port to run the server on (default: `3000`)
-* `livereload`: enable the [live reload](https://github.com/mklabs/tiny-lr) server
-** `watch`: array of file patterns to watch for changes for the live reload server
+* `livereload`: the port of the livereload server (default: `35729`)
 * `routes`: the routes of the webdev server
 ** `path`: the path of the route
 ** `type`: the route type (see belows for a list of possible types)
