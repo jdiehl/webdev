@@ -67,6 +67,7 @@ The static route maps all contents of a directory to the given path.
 Configuration options:
 
 * `root`: the root path of the directory, relative to where webdev is run
+* `watch`: watch the contents of the rooth path and trigger livereload events (do not use this on large folders such as `node_modules` or `bower_components`!)
 
 ### concat
 
