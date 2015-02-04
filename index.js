@@ -2,6 +2,7 @@
 'use strict';
 
 var fs = require('fs');
+var info = require('./package.json');
 var createServer = require('./lib/server');
 
 function loadConfig(done) {
@@ -21,6 +22,6 @@ loadConfig(function (err, config) {
   if (err) return console.error('Could not load configuration file webdev.json:', err);
   var server = createServer(config, function (err) {
     if (err) return console.error('Could not start server:', err);
-    console.log('webdev server listening on port', server.address().port);
+    console.log('webdev v' + info.version + ' listening on port ' + server.address().port);
   });
 });
