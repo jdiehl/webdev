@@ -31,9 +31,6 @@ Create the file `webdev.json` in your project root and configure it using the fo
     "path": "webdev.log"
   },
   "port": 80,
-  "livereload": {
-    "watch": ["app/**/*", "public/**/*"]
-  },
   "routes": [{
     "path": "/",
     "type": "static",
@@ -45,7 +42,8 @@ Create the file `webdev.json` in your project root and configure it using the fo
   },{
     "path": "/app",
     "type": "static",
-    "root": "app/"
+    "root": "app/",
+    "watch": true
   },{
     "path": "/app.js",
     "type": "concat",
@@ -121,3 +119,11 @@ Example:
   "target": "http://127.0.0.1:1337/ws"
 }
 ```
+
+### rest
+
+The rest route creates a mock-backend that accepts RESTful requests to query and manipulate documents. The documents are stored persistently in [nedb](https://github.com/louischatriot/nedb) databases.
+
+Configuration options:
+
+* `store`: path to store the databases
