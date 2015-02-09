@@ -109,6 +109,7 @@ The proxy route forwards all requests to the specified target machine.
 Configuration options:
 
 * `target`: the proxy url
+* `run`: optional shell script to execute to launch the server
 
 Example:
 
@@ -116,7 +117,8 @@ Example:
 {
   "path": "/api",
   "type": "proxy",
-  "target": "http://127.0.0.1:1337/ws"
+  "target": "http://127.0.0.1:1337/ws",
+  "run": "nodemon server.js"
 }
 ```
 
