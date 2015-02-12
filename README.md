@@ -110,6 +110,8 @@ Configuration options:
 
 * `target`: the proxy url
 * `run`: optional shell script to execute to launch the server
+* `cwd`: directory to execute the run script in
+* `env`: environment variables for the run script
 
 Example:
 
@@ -118,7 +120,11 @@ Example:
   "path": "/api",
   "type": "proxy",
   "target": "http://127.0.0.1:1337/ws",
-  "run": "nodemon server.js"
+  "run": "nodemon server.js",
+  "cwd": "myserver/",
+  "env": {
+    "port": 8000
+  }
 }
 ```
 
