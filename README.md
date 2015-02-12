@@ -84,6 +84,24 @@ Configuration options:
 
 * `files`: list of [glob](https://github.com/isaacs/node-glob) patterns
 
+### text
+
+The text route responds to the given url with a static text.
+
+Configuration options:
+
+* `text`: the text to send
+
+Example:
+
+```
+{
+  "path": "/greet.txt",
+  "type": "text",
+  "text": "Hello World!"
+}
+```
+
 ### redirect
 
 The redirect route redirects the browser to a different url.
