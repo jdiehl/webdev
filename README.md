@@ -96,9 +96,10 @@ Example:
 
 ```
 {
-  "path": "/greet.txt",
+  "path": "/greet.js",
   "type": "text",
-  "text": "Hello World!"
+  "text": "alert('Hello World!');",
+  "contentType": "text/javascript"
 }
 ```
 
