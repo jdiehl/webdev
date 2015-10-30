@@ -154,3 +154,16 @@ The rest route creates a mock-backend that accepts RESTful requests to query and
 Configuration options:
 
 * `store`: path to store the databases
+
+### cordova
+
+The cordova route serves the appropriate cordova files to mobile devices.
+
+Example:
+
+```
+{
+  "path": "/",
+  "type": "cordova"
+}
+```
