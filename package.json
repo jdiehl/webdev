@@ -1,6 +1,6 @@
 {
   "name": "webdev",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "NodeJS Web Development Server",
   "main": "index.js",
   "bin": {
