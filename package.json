@@ -1,6 +1,6 @@
 {
   "name": "webdev",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "NodeJS Web Development Server",
   "main": "index.js",
   "bin": {
@@ -18,18 +18,18 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "async": "^1.4.2",
+    "async": "^2.6.0",
     "body-parser": "^1.14.0",
     "express": "^4.13.3",
-    "express-http-proxy": "^0.6.0",
-    "gaze": "~0.5.1",
-    "glob": "^5.0.14",
+    "express-http-proxy": "^1.1.0",
+    "gaze": "^1.1.2",
+    "glob": "^7.1.2",
     "less": "^2.5.1",
     "less-plugin-autoprefix": "^1.5.0",
     "morgan": "^1.6.1",
     "nedb": "^1.2.0",
     "require-all": "^2.0.0",
-    "source-map": "^0.5.0",
-    "tiny-lr": "^0.2.1"
+    "source-map": "^0.6.1",
+    "tiny-lr": "^1.0.5"
   }
 }
