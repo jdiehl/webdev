@@ -1,5 +1,7 @@
 # NodeJS Web Development Server
 
+I have stopped development on this package in favor of more modern approaches such as [webpack](https://github.com/webpack/webpack)
+
 ## Installation
 
     npm i -g webdev
